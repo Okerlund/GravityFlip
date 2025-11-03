@@ -31,11 +31,11 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("jump") and is_on_ceiling():
 		velocity.y = jump_force
 
-	if Input.is_action_just_pressed("flip_gravity") and not gravity_flipped and is_on_floor():
+	if Input.is_action_just_pressed("flip_gravity") and is_on_floor():
 		sprite.flip_v = true
 		collision.move_local_y(-28)
 		gravity_flipped = true
-	if Input.is_action_just_pressed("flip_gravity") and gravity_flipped and is_on_ceiling():
+	if Input.is_action_just_pressed("flip_gravity") and is_on_ceiling():
 		sprite.flip_v = false
 		collision.move_local_y(28)
 		gravity_flipped = false
