@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Gravity Flip"
+run/main_scene="uid://cq3tuv7arjpmp"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
-[rendering]
+[dotnet]
 
-renderer/rendering_method="forward_plus"
+project/assembly_name="Gravity Flip"
